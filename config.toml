@@ -1,0 +1,183 @@
+baseURL = "https://3dprintmagnets.com/"
+languageCode = "en-us"
+title = "3D Print Magnets"
+theme = "printwire"
+
+[params]
+tagline       = "Additive manufacturing of permanent magnets — binder jet printed NdFeB, printed magnetic composites, and topology-optimised magnetic field geometries."
+description   = "3D Print Magnets covers the additive manufacturing of magnetic materials — from binder jetting of NdFeB permanent magnets to FDM magnetic filament composites and custom electromagnet cores."
+keywords      = "3D printed magnets, NdFeB additive manufacturing, printed permanent magnet, magnetic composite 3D print, binder jet magnets, custom magnet geometry"
+logoEmoji     = "🧲"
+contactEmail  = "maxdavisgroup@gmail.com"
+footerServicesLabel = "Services"
+
+colorPrimary      = "#a855f7"
+colorPrimaryDark  = "#9333ea"
+colorPrimaryLight = "#c084fc"
+colorBgDark       = "#07030f"
+colorBgSection    = "#0b0618"
+colorBgCard       = "#110922"
+colorBgCardHover  = "#170d2e"
+
+fontPrimary   = "Orbitron"
+fontSecondary = "Source+Sans+3"
+
+newsFallbackImages = ["https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80"]
+
+heroEyebrow  = "Magnetic Material AM"
+heroTitle    = "3D Print <em>Magnets</em>"
+heroSubtitle = "Additive manufacturing of permanent magnets — binder jet printed NdFeB, printed magnetic composites, and topology-optimised magnetic field geometries."
+heroCta1Text = "Explore Services"
+heroCta1URL  = "/services/"
+heroCta2Text = "Get a Quote"
+heroCta2URL  = "/contact/"
+heroImage    = "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80"
+
+overviewTitle   = "Custom Magnetic Geometry by AM"
+overviewText    = "Topology-optimised permanent magnets, printed NdFeB with 60% of sintered density, and magnetic composite FDM — additive manufacturing enables magnet geometries that no sintering press can produce."
+overviewBtnText = "View Services"
+overviewBtnURL  = "/services/"
+
+applicationsTitle = "Industries We Serve"
+servicesTitle    = "3D Print Magnets Services"
+servicesSubtitle = "Additive manufacturing of permanent magnets — binder jet printed NdFeB, printed magnetic composites, and topology-optimised magnetic field geometries."
+clusterTitle = "Related 3D Printing Resources"
+newsletterTitle = "Industry Updates to Your Inbox"
+newsletterText  = "Research breakthroughs and industry news — delivered monthly."
+ctaTitle   = "Start Your Project"
+ctaText    = "Additive manufacturing of permanent magnets — binder jet printed NdFeB, printed magnetic composites, and topology-optimised magnetic field geometries."
+ctaBtnText = "Get in Touch"
+ctaBtnURL  = "/contact/"
+
+[[params.stats]]
+count  = 60
+suffix = "%"
+label  = "Density vs Sintered NdFeB"
+
+[[params.stats]]
+count  = 500
+suffix = "mT"
+label  = "Max Surface Field (Printed)"
+
+[[params.stats]]
+count  = 48
+suffix = "hr"
+label  = "Custom Magnet Lead Time"
+
+[[params.stats]]
+count  = 100
+suffix = "+"
+label  = "Geometric Configurations"
+
+
+[[params.applications]]
+title       = "Motor & Generator Design"
+description = "Custom rotor magnets with optimised flux geometry for electric motors and generators."
+image       = "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80"
+
+[[params.applications]]
+title       = "Medical Devices"
+description = "Biocompatible magnetic components for MRI-compatible devices and targeted drug delivery systems."
+image       = "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80"
+
+[[params.applications]]
+title       = "Sensors & Actuators"
+description = "Custom magnetic field geometries for Hall effect sensors, reed switches, and magnetic actuators."
+image       = "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80"
+
+[[params.applications]]
+title       = "Consumer Electronics"
+description = "Speaker magnets, wireless charging coils, and magnetic locking mechanisms in consumer devices."
+image       = "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80"
+
+
+[[params.servicesPreview]]
+icon        = "🧲"
+title       = "Binder Jet NdFeB Printing"
+description = "Binder jetting of NdFeB powder — sintered post-process to 90%+ density, custom pole geometry, and field optimisation."
+
+[[params.servicesPreview]]
+icon        = "◎"
+title       = "Magnetic Composite FDM"
+description = "NdFeB-loaded PLA and nylon filament for prototype magnets — 5–15% density but full geometric freedom."
+
+[[params.servicesPreview]]
+icon        = "🔬"
+title       = "Topology-Optimised Magnets"
+description = "Computational field optimisation for permanent magnet geometry — maximise flux density for target application."
+
+[[params.servicesPreview]]
+icon        = "⚡"
+title       = "Custom Electromagnet Cores"
+description = "Soft magnetic composite cores for transformers, inductors, and electromagnetic actuators — printed to custom geometry."
+
+
+[[params.services]]
+name        = "Binder Jet NdFeB Printing"
+description = "Binder jetting of NdFeB powder — sintered post-process to 90%+ density, custom pole geometry, and field optimisation."
+icon        = "🧲"
+image       = "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80"
+
+[[params.services]]
+name        = "Magnetic Composite FDM"
+description = "NdFeB-loaded PLA and nylon filament for prototype magnets — 5–15% density but full geometric freedom."
+icon        = "◎"
+image       = "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80"
+
+[[params.services]]
+name        = "Topology-Optimised Magnets"
+description = "Computational field optimisation for permanent magnet geometry — maximise flux density for target application."
+icon        = "🔬"
+image       = "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80"
+
+[[params.services]]
+name        = "Custom Electromagnet Cores"
+description = "Soft magnetic composite cores for transformers, inductors, and electromagnetic actuators — printed to custom geometry."
+icon        = "⚡"
+image       = "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80"
+
+
+[[params.clusterLinks]]
+name        = "3dprintmagnets.com"
+url         = "https://3dprintmagnets.com"
+description = "Magnetic materials 3D printing"
+
+[[params.clusterLinks]]
+name        = "dmls3d.com"
+url         = "https://dmls3d.com"
+description = "Metal 3D printing"
+
+[[params.clusterLinks]]
+name        = "3dprintcircuitry.com"
+url         = "https://3dprintcircuitry.com"
+description = "Electronics AM"
+
+[[params.clusterLinks]]
+name        = "sendcutship.com"
+url         = "https://sendcutship.com"
+description = "Custom manufacturing"
+
+[[menu.main]]
+name = "Home"
+url  = "/"
+weight = 1
+[[menu.main]]
+name = "About"
+url  = "/about/"
+weight = 2
+[[menu.main]]
+name = "Articles"
+url  = "/articles/"
+weight = 3
+[[menu.main]]
+name = "Services"
+url  = "/services/"
+weight = 4
+[[menu.main]]
+name = "Contact"
+url  = "/contact/"
+weight = 5
+[[menu.main]]
+name = "Advertise"
+url  = "/advertise/"
+weight = 6
