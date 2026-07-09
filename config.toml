@@ -12,7 +12,7 @@ title = "3D Print Magnets"
 [params]
 siteName      = "3D Print Magnets"
 logoHtml      = '3D&nbsp;PRINT&nbsp;<span class="ed-logo-accent">MAGNETS</span>'
-ogImage       = "/images/03_antenna.png"
+ogImage       = "/images/m03_motor_rotor.png"
 tagline       = "Additive manufacturing of permanent magnets — binder jet printed NdFeB, printed magnetic composites, and topology-optimised magnetic field geometries."
 description   = "3D Print Magnets covers the additive manufacturing of magnetic materials — from binder jetting of NdFeB permanent magnets to FDM magnetic filament composites and custom electromagnet cores."
 keywords      = "3D printed magnets, NdFeB additive manufacturing, printed permanent magnet, magnetic composite 3D print, binder jet magnets, custom magnet geometry"
