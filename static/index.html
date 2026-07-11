@@ -82,36 +82,10 @@
 
     <div class="ed-section-label">
       Analysis &amp; Deep Dives
-      <a href="#">View All &rarr;</a>
+      <a href="/articles/">View All &rarr;</a>
     </div>
-    <div class="ed-list">
-      <article class="ed-list-item">
-        <img src="images/mg02_halbach.png" alt="Printed Halbach array">
-        <div>
-          <span class="ed-badge">Arrays</span>
-          <div class="ed-card-meta">June 24, 2026 · 9 min read</div>
-          <h3><a href="#">Printed Halbach Arrays Concentrate Flux on One Side</a></h3>
-          <p class="ed-card-excerpt">Segment-by-segment printing of oriented magnet material is producing Halbach arrays that nearly double field on one face while canceling it on the other.</p>
-        </div>
-      </article>
-      <article class="ed-list-item">
-        <img src="images/mg03_motor_rotor.png" alt="Soft-magnetic core">
-        <div>
-          <span class="ed-badge">Soft Magnetics</span>
-          <div class="ed-card-meta">June 20, 2026 · 7 min read</div>
-          <h3><a href="#">Printed Soft-Magnetic Cores Cut Eddy-Current Losses</a></h3>
-          <p class="ed-card-excerpt">Printed soft-magnetic composites with engineered insulation between particles are lowering core loss in transformers and motor stators.</p>
-        </div>
-      </article>
-      <article class="ed-list-item">
-        <img src="images/mg04_magnetic_lattice.png" alt="Bonded printed magnet">
-        <div>
-          <span class="ed-badge">Magnets</span>
-          <div class="ed-card-meta">June 18, 2026 · 10 min read</div>
-          <h3><a href="#">Net-Shape Bonded Magnets Reach the Motor Rotor</a></h3>
-          <p class="ed-card-excerpt">Bonded NdFeB printed to final geometry is putting permanent magnets exactly where the design wants them — no machining, no wasted material.</p>
-        </div>
-      </article>
+    <div class="ed-list" id="pwDeepDives">
+      <div style="padding:1.5rem;color:var(--text-faint);">Loading analysis…</div>
     </div>
 
     <div class="ed-section-label">
@@ -421,6 +395,31 @@ document.querySelector('.ed-nav-toggle')?.addEventListener('click', () => {
       ? top.map(card).join('')
       : '<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-faint);">Unable to load news.</div>';
   }
+})();
+
+// -- Analysis & Deep Dives: PrintWire catalog in list format --
+(function(){
+  var box = document.getElementById('pwDeepDives');
+  if (!box) return;
+  function esc(s){var d=document.createElement('div');d.appendChild(document.createTextNode(s==null?'':s));return d.innerHTML;}
+  var empty = '<div style="padding:1.5rem;color:var(--text-faint);">In-depth analysis and deep dives are on the way — check back soon.</div>';
+  fetch('network.json',{cache:'no-store'})
+    .then(function(r){ return r.ok ? r.json() : []; })
+    .then(function(items){
+      items = (items || []).slice();
+      items.sort(function(a,b){ return (b.iso||'').localeCompare(a.iso||''); });
+      if (!items.length){ box.innerHTML = empty; return; }
+      box.innerHTML = items.slice(0,8).map(function(a){
+        var img = a.img ? '<img src="'+esc(a.img)+'" alt="" loading="lazy">' : '';
+        var meta = esc(a.date||'') + (a.origin ? ' · '+esc(a.origin) : '');
+        return '<article class="ed-list-item">'+img+'<div>'+
+          '<div class="ed-card-meta">'+meta+'</div>'+
+          '<h3><a href="'+esc(a.url)+'">'+esc(a.title)+'</a></h3>'+
+          '<p class="ed-card-excerpt">'+esc(a.summary||'')+'</p>'+
+          '</div></article>';
+      }).join('');
+    })
+    .catch(function(){ box.innerHTML = empty; });
 })();
 </script>
 </body>
